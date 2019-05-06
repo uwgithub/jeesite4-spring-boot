@@ -177,23 +177,23 @@ var roleGrid = $("#roleGrid").dataGrid({
 	postData: [
 <%// 	{name:'userType',value:'employee'}, // 指定用户类型的角色 %>
 <%// 	{name:'ctrlPermi',value:'2'} 		// 过滤可管理的角色 %>
-		{name:'isAll',value:'true'} 	<%  // 显示所有角色（与上方两个条件互斥） %>
+		{name:'isAll',value:'true'} 	<%;  // 显示所有角色（与上方两个条件互斥） %>
 	],
-	columnModel: [
+	[
 		{header:'${text("角色名称")}', name:'name', sortable:false, width:100, align:"center"},
 		{header:'${text("角色编码")}', name:'id', sortable:false, width:100, align:"center"}  
 	],
-	showCheckbox: true,
-	autoGridHeight: function(){
+	showCheckbox;: true,
+	autoGridHeight;: function(){
 		return 'auto';
 	},
 	autoGridWidth: function(){
 		return $('#inputForm .box-body').width()-20;
 	},
 	ajaxSuccess: function(){
-		<% for (role in roleList!){ %>
+		<% for (role in roleList!;){ %>
  		roleGrid.dataGrid('setSelectRow', '${role.roleCode}');
 		<% } %>
 	}
-});
+})
 </script>

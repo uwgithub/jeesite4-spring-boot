@@ -1,29 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
 	<parent>
 		<groupId>com.jeesite</groupId>
 		<artifactId>jeesite-parent</artifactId>
 		<version>4.1.4-SNAPSHOT</version>
 		<relativePath>../../parent/pom.xml</relativePath>
 	</parent>
-	
 	<artifactId>jeesite-module-core</artifactId>
 	<packaging>jar</packaging>
-	
 	<name>JeeSite Module Core</name>
 	<url>http://jeesite.com</url>
 	<inceptionYear>2013-Now</inceptionYear>
-	
-	<properties>
-	
-	</properties>
-	
+	<properties></properties>
 	<dependencies>
-		
-		<!-- JDBC device begin -->
+		<!--  JDBC device begin  -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
@@ -45,58 +35,72 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- JDBC device end -->
-		
-		<!-- Common -->
+		<!--  JDBC device end  -->
+		<!--  Common  -->
 		<dependency>
 			<groupId>com.jeesite</groupId>
 			<artifactId>jeesite-common</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
-		<!-- Framework -->
+		<!--  Framework  -->
 		<dependency>
 			<groupId>com.jeesite</groupId>
 			<artifactId>jeesite-framework</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
-		
 	</dependencies>
-	
+
 	<build>
 		<plugins>
-		
+			<!--跳过javadoc-->
+			<!--plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin-->
 		</plugins>
 	</build>
-	
-	<developers>  
+
+	<developers>
 		<developer>
 			<id>thinkgem</id>
 			<name>WangZhen</name>
 			<email>thinkgem at 163.com</email>
-			<roles><role>Project lead</role></roles>
-			<timezone>+8</timezone>  
+			<roles>
+				<role>Project lead</role>
+			</roles>
+			<timezone>+8</timezone>
 		</developer>
 	</developers>
-	
 	<organization>
 		<name>JeeSite</name>
 		<url>http://jeesite.com</url>
 	</organization>
-	
-	<repositories>
+	<!--repositories>
 		<repository>
 			<id>aliyun-repos</id>
 			<url>https://maven.aliyun.com/repository/public</url>
-			<releases><enabled>true</enabled></releases>
-			<snapshots><enabled>false</enabled></snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
 		</repository>
-        <repository>
-		    <id>sonatype-repos-s</id>
+		<repository>
+			<id>sonatype-repos-s</id>
 			<name>Sonatype Repository</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<releases><enabled>false</enabled></releases>
-			<snapshots><enabled>true</enabled></snapshots>
+			<url>
+				https://oss.sonatype.org/content/repositories/snapshots
+			</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 	</repositories>
 	<pluginRepositories>
@@ -104,6 +108,5 @@
 			<id>aliyun-repos</id>
 			<url>https://maven.aliyun.com/repository/public</url>
 		</pluginRepository>
-	</pluginRepositories>
-	
+	</pluginRepositories-->
 </project>

@@ -70,7 +70,7 @@ Layer.prototype.view = function(){
     if(btns === 0 || !config.btn){
       return '';
     }
-    btndom = '<span yes type="1">'+ config.btn[0] +'</span>'
+    btndom = '<span yes type="1">'+ config.btn[0] +'</span>';
     if(btns === 2){
       btndom = '<span no type="0">'+ config.btn[1] +'</span>' + btndom;
     }
@@ -198,7 +198,7 @@ win.layer = {
     var link = doc.createElement('link');
     link.href = path + 'need/layer.css?2.0';
     link.type = 'text/css';
-    link.rel = 'styleSheet'
+    link.rel = 'styleSheet';
     link.id = 'layermcss';
     return link;
   }());

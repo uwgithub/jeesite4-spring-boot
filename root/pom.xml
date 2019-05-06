@@ -16,9 +16,26 @@
         <module>../parent</module>
         <module>../common</module>
         <module>../modules/core</module>
-        <module>../web</module>
+        <module>../jeesite-web</module>
     </modules>
-	
+
+	<distributionManagement>
+		<!--正式版本-->
+		<repository>
+			<!-- nexus服务器中用户名：在settings.xml中<server>的id-->
+			<id>maven-releases</id>
+			<!-- 这个名称自己定义 -->
+			<name>Release repository</name>
+			<url>http://127.0.0.1:8081/repository/maven-releases/</url>
+		</repository>
+		<!--快照-->
+		<snapshotRepository>
+			<id>maven-snapshots</id>
+			<name>Snapshots repository</name>
+			<url>http://127.0.0.1:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<developers>  
 		<developer>
 			<id>thinkgem</id>

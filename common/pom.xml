@@ -42,6 +42,11 @@
 		    <artifactId>commons-fileupload</artifactId>
 		    <version>${commons-fileupload.version}</version>
 		</dependency>
+		<!--dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${commons-collections.version}</version>
+		</dependency-->
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
@@ -292,7 +297,10 @@
 	
 	<build>
 		<plugins>
-			
+			<!--plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin-->
 		</plugins>
 	</build>
 	

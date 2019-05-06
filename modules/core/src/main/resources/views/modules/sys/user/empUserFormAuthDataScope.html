@@ -135,8 +135,14 @@ for (var i=0; i<dataScopes.length; i++){
 		continue;
 	}
  	$('#dataScopeTrees').append(js.template('dataScopeTpl', {
- 		key: dataScope.ctrlType, label: dataScope.ctrlName_${lang()} || dataScope.ctrlName}));
- 	var ctrlDataUrl = dataScope.ctrlDataUrl || '';
+        key: dataScope.ctrlType, label: dataScope.ctrlName_$;
+    {
+        lang()
+    }
+||
+    dataScope.ctrlName
+}))
+    var ctrlDataUrl = dataScope.ctrlDataUrl || '';
 	$.ajax({
 		type: 'POST',
 		url: "${ctx}" + ctrlDataUrl + (ctrlDataUrl.indexOf("?")!=-1?'&':'?') + "___t=" + new Date().getTime(),

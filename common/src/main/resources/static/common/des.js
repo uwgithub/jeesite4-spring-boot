@@ -39,7 +39,7 @@
 			return strDec(data, secretKey, '', '');
 		}
 		return '';
-	}
+	};
 	
 	/*
 	 * encrypt the string to string made up of hex
@@ -284,7 +284,7 @@
 	* return bit array(it's length % 64 = 0)
 	*/
 	function getKeyBytes(key){
-	 var keyBytes = new Array();
+	 var keyBytes = [];
 	 var leng = key.length;
 	 var iterator = parseInt(leng/4);
 	 var remainder = leng%4;
@@ -791,24 +791,24 @@
 	*/
 	function generateKeys(keyByte){    
 	 var key   = new Array(56);
-	 var keys = new Array();  
+	 var keys = [];
 	 
-	 keys[ 0] = new Array();
-	 keys[ 1] = new Array();
-	 keys[ 2] = new Array();
-	 keys[ 3] = new Array();
-	 keys[ 4] = new Array();
-	 keys[ 5] = new Array();
-	 keys[ 6] = new Array();
-	 keys[ 7] = new Array();
-	 keys[ 8] = new Array();
-	 keys[ 9] = new Array();
-	 keys[10] = new Array();
-	 keys[11] = new Array();
-	 keys[12] = new Array();
-	 keys[13] = new Array();
-	 keys[14] = new Array();
-	 keys[15] = new Array();  
+	 keys[ 0] = [];
+	 keys[ 1] = [];
+	 keys[ 2] = [];
+	 keys[ 3] = [];
+	 keys[ 4] = [];
+	 keys[ 5] = [];
+	 keys[ 6] = [];
+	 keys[ 7] = [];
+	 keys[ 8] = [];
+	 keys[ 9] = [];
+	 keys[10] = [];
+	 keys[11] = [];
+	 keys[12] = [];
+	 keys[13] = [];
+	 keys[14] = [];
+	 keys[15] = [];
 	 var loop = [1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1];
 	
 	 for(i=0;i<7;i++){

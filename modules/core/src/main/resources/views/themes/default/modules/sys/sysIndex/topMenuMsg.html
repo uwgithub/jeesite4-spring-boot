@@ -24,7 +24,7 @@
 	<script type="text/template" id="msgListTpl">
 		<li id="msg{{d.id}}"><a href="javascript:"
 				data-href="${ctx}/msg/readMsg?id={{d.id}}"
-				onclick="readMsg(this, '${text('查看消息')}', '{{d.id}}')" >
+				onclick="readMsg(this, '${text(';查看消息;')}', '{{d.id}}';)" >
 			<div class="pull-left"><i class="img-circle bg-aqua icon-bubble"></i></div>
 			<h4>{{d.msgContentEntity.title}} <small><i class="fa fa-clock-o"></i>
 				<abbr class="timeago" title="{{d.sendDate}}">{{d.sendDate}}</abbr></small></h4>
@@ -38,11 +38,12 @@
 			{{# $.each(d.msgContentEntity.buttons, function(idx, item){ }}
 				<button class="btn btn-default btn-sm" type="button"
 					data-href="${ctxPath}{{item.href}}"
-					onclick="readMsg(this, '${text('查看消息')}', '{{item.id}}');">{{item.name}}</button>&nbsp;
-			{{# }); }}
+                        onclick="readMsg(this, '${text(';查看消息;')}', '{{item.id}}';)">{{item.name}}
+                </button>&nbsp;
+            {{# }); }}
 			<button type="button" class="btn btn-default btn-sm"
 				data-href="${ctx}/msg/readMsg?id={{d.id}}"
-				onclick="readMsg(this, '${text('消息详情')}', '{{d.id}}')">${text('查看')}</button>&nbsp;
+				onclick="readMsg(this, '${text(';消息详情;')}', '{{d.id}}';)">${text('查看')}</button>&nbsp;
 		</div>
 	</script>
 </li>
