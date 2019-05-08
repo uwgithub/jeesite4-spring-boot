@@ -11,7 +11,7 @@
 	<name>JeeSite Module Core</name>
 	<url>http://jeesite.com</url>
 	<inceptionYear>2013-Now</inceptionYear>
-	<properties></properties>
+	<!--properties></properties-->
 	<dependencies>
 		<!--  JDBC device begin  -->
 		<dependency>
@@ -23,6 +23,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.6</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
